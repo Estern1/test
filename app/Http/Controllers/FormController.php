@@ -9,7 +9,7 @@ class FormController extends Controller
 {
     public function form()
     {
-        $response = Http::get('https://restcountries.eu/rest/v2/all');
+        $response = Http::get('https://restcountries.eu/rest/v2/region/europe');
         if ($response->status() != 200) {
             $countries = [];
         } else {
